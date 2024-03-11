@@ -90,6 +90,13 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }
+}
+
 nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
         handleNextButton();
