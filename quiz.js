@@ -1,20 +1,29 @@
 const questions = [
     {
-        questions:"which is largest animal in the world?",
+        questions:"which is the best Coding School in Ogun State?",
         answers: [
-            {text: "shark", correct: false},
-            {text: "Blue whale", correct: true},
-            {text: "Elephant", correct: false},
-            {text: "Giraffe", correct: false},
+            {text: "Val Tech Hub", correct: false},
+            {text: "DLT Africa", correct: true},
+            {text: "Build Africa", correct: false},
+            {text: "TrustTech", correct: false},
         ]
     },
     {
         questions:"which is largest desert in the world?",
         answers: [
             {text: "Kalahari", correct: false},
-            {text: "Gobi", correct: true},
+            {text: "Gobi", correct: false},
             {text: "Sahara", correct: false},
             {text: "Antarctica", correct: true},
+        ]  
+    }, 
+    {
+        questions:"which is smallest country in the world?",
+        answers: [
+            {text: "Vatican City", correct: true},
+            {text: "Bhutan", correct: false},
+            {text: "Nepal", correct: false},
+            {text: "Shri Lanka", correct: false},
         ]  
     }, 
     {
@@ -93,6 +102,8 @@ function selectAnswer(e) {
 function showScore(){
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
 }
 
 function handleNextButton(){
